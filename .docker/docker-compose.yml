@@ -1,0 +1,13 @@
+version: '3.8'
+services:
+  scrapy:
+    # build:
+    #   context: .
+    #   dockerfile: Dockerfile
+    image: pointsandlines/scrapy-python3
+    command: tail -F anything
+    container_name: scrapy-python3
+    restart: always
+    volumes:
+      - ../:/var/
+    working_dir: /var/
